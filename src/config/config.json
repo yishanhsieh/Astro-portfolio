@@ -17,9 +17,10 @@
     "sticky_header": true,
     "theme_switcher": true,
     "default_theme": "system",
-    "pagination": 2,
+    "pagination": 6,
     "summary_length": 200,
-    "blog_folder": "blog"
+    "blog_folder": "blog",
+    "project_folder": "project"
   },
 
   "params": {
@@ -28,7 +29,7 @@
   },
 
   "navigation_button": {
-    "enable": true,
+    "enable": false,
     "label": "Get Started",
     "link": "https://github.com/zeon-studio/astroplate"
   },

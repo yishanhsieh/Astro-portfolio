@@ -53,3 +53,9 @@ strong {
 code {
   @apply after:border-none;
 }
+
+a:hover {
+ text-decoration-line: underline;
+ text-decoration-color: pink;
+ text-decoration-style: wavy;
+}
