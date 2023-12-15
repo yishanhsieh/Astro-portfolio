@@ -1,5 +1,15 @@
 .btn {
   @apply inline-block rounded border border-transparent px-5 py-2 font-semibold capitalize transition;
+  &:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    color: #fff;
+    transform: translateY(-3px); /* Move the button slightly up on hover */
+  }
+  &:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4); /* Add a focus border */
+  }
 }
 
 .btn-sm {
@@ -13,3 +23,5 @@
 .btn-outline-primary {
   @apply border-dark bg-transparent text-dark no-underline hover:bg-dark hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-dark;
 }
+
+

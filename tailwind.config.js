@@ -39,6 +39,7 @@ module.exports = {
       center: true,
       padding: "2rem",
     },
+
     extend: {
       colors: {
         text: theme.colors.default.text_color.default,

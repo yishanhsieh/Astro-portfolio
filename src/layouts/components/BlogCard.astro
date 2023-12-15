@@ -4,6 +4,7 @@ import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
 
+
 const {
   summary_length,
   blog_folder,
@@ -31,12 +32,12 @@ const { title, image, date, author, categories } = data.data;
     </a>
   </h4>
   <ul class="mb-4">
-   <li class="mr-4 inline-block">
+ <!--   <li class="mr-4 inline-block">
       <a href={`/authors/${slugify(author)}`}>
         <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
         {humanize(author)}
       </a>
-    </li> 
+    </li> --> 
     <li class="mr-4 inline-block">
       <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
       {

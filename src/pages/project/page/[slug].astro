@@ -1,6 +1,7 @@
 ---
 import BlogCard from "@/components/BlogCard.astro";
 import Pagination from "@/components/Pagination.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
@@ -56,7 +57,7 @@ export async function getStaticPaths() {
             {
               currentPosts.map((post) => (
                 <div class="mb-14 md:col-6">
-                  <BlogCard data={post} />
+                  <ProjectCard data={post} />
                 </div>
               ))
             }

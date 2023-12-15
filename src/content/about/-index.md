@@ -1,9 +1,15 @@
 ---
-title: "Hey, I am John Doe!"
+title: "Hey👋, I am Yishan (Sandy)"
 meta_title: "About"
-description: "this is meta description"
-image: "/images/avatar.png"
+description: "about yishan"
+image: "/images/avatar.webp"
 draft: false
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+I always like to try new things. I self learn coding, design, public speaking and skateboarding in my free time. 2023 is a big pivot for me. I quit my job in Taiwan, and flighted 7,676 miles to Indiana, the United States, to pursue my study aboard dream.
+
+In my previous job as a sales product manager in [ASUS](https://www.asus.com/), I was mainly responsible for healthcare innovation business. Everyday I was bombarded with questions like how to deliver health-related data and information clearly for doctors and patients, which triggers me to pick up data visualization and front-end design as my specialization.
+
+I earned my bachelor and master degree in Library and information science at [National Taiwan University](https://www.ntu.edu.tw/english/), where I picked up UX research skills and gained the opportunity to visit [San Francisco Public Library](https://sfpl.org/) as an observational student.
+
+Nice to meet you😊.

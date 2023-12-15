@@ -1,0 +1,202 @@
+---
+title: "Reduce Patients' Waiting Unsatisfaction by Robot"
+meta_title: ""
+description: "Use service robots to reduce clinic waiting time and patient dissatisfaction."
+date: 2021-06-22T05:00:00Z
+image: "/images/Zenbo-cover.png"
+categories: ["project"]
+author: ""
+tags: ["HRI", "VUI", "UX research"]
+draft: false
+---
+
+<br />
+<br />
+
+### Project Overview
+
+- **Project time**: 2021 June ~ 2022 April
+- **My role**: Product manager, UX researcher
+- **Highlights**:
+  - Real hospital problem solving and testing
+  - Design decision making based on hospital constraints
+
+## ![Artboard 1](/images/Zenbo-5.png)
+
+---
+
+### Challenges
+
+- #### Patients burn out with long waits and short appointment
+
+  VGH is a first-class medical center in Taipei, Taiwan. An anesthesiologist takes care of 150 clinic patients for preanesthetic assessment on average. The hospital consistently received patients' complaints due to long waits and short appointments. <ins>Each patient should wait for 40 minutes to 1 hour</ins>, and take the assessment only for 5 minutes.
+
+- #### Doctors are overwhelmed with too many patients and paper work
+  Since the <ins>preanesthetic assessment form hasn't been digitalized</ins>, doctors have to quickly record as they speak to the patient, which leads to patients' dissatisfaction, regarding doctors being inconsiderate.
+
+---
+
+### User Research
+
+<Tabs client:load>
+
+<Tab name="Doctors' side">
+
+#### From doctors' side
+
+- **Methods**: Phone and in-person interview with eight anesthesiologists
+- **Interview questions**:
+  - What and how do you usually ask patients based on the assessment form?
+  - What usually takes you the most time in the assessment?
+- **Doctors' Task Analysis**
+  ![Doctors' Task Analysis](/images/Zenbo-6.png)
+
+</Tab>
+
+<Tab name="Patients' side">
+
+#### From patients' side
+
+- **Methods**:
+  In-person interview with staff in hospital and two of my colleagues with preanesthetic assessment experience in that hospital.
+- **Interview questions**:
+
+  - Share your experience of going to the preanesthetic assessment.
+  - What do you think important in the assessment?
+
+- **Patients' Task Analysis**:
+
+  After visualizing patients' workflow in assessment, task 4 and task 5 are two steps where Zenbo will provide assistance to ease their unsatisfaction.
+
+  ![Patients' Task Analysis](/images/Zenbo-7.png)
+
+- **Three types of patients**: From user interview, I summarized three types of patients:
+
+  ![Artboard 13](/images/Zenbo-8.png)
+
+</Tab>
+
+<Tab name="Summary">
+
+#### Research Take-away
+
+| Stakeholders       | Patient                                              | Doctor                                                                    | Hospital director             |
+| ------------------ | ---------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------- |
+| **Demographics**   | Age: 30~65,<br/>90% for painless gastroscopy         | Mostly are resident doctors                                               | Experienced visiting staff    |
+| **What they care** | No long waits,<br/> <ins>Customized assessment</ins> | <ins>Efficient patient filtering</ins>,<br/>More time on complex patients | Medical record digitalization |
+
+</Tab>
+
+</Tabs>
+
+---
+
+### Problem statement
+
+Through the user interview, I narrowed down the problems into three:
+
+1. How to reduce patients' unsatisfaction while waiting?
+2. How to help doctors focus on complex patients?
+3. How to seemlessly store the assessment results into the hospital system?
+
+---
+
+### Design process
+
+The hospital is in cooperation with ASUS robot team, so this project we used ASUS service robot, [Zenbo Junior](https://zenbo.asus.com/product/zenbojuniorii/overview/), as the intervention. During the design process, I had close cooperation with doctor for professional medical consultation about quesiton designs and ethics issues.
+
+![Artboard 1](/images/Zenbo-1.png)
+
+<Tabs client:load>
+
+<Tab name="Phase 1">
+
+### Phase 1: Role & Function Design
+
+Considering medical legistration and medical concerns, we set up Zenbo as an asssitant who helps fitler patients' conditions into simple, moderate and complex conditions.The main task of Zenbo is to ask the routine 12 medical history questions, and the human doctors would focus on explaining anesthetic risks.<br/><br/>
+In terms of facial expression, since most of patients are middle-age adults, I selected
+a friendly smily face, and a professional female tone as the robot's voice.
+
+![Artboard 2](/images/Zenbo-2.png)
+
+</Tab>
+
+<Tab name="Phase 2">
+
+### Phase 2: Human-Robot Cooperation Flow Design
+
+By observing the current clinic environment and discussing with the hospital staff about the new service flow, we decided to set up a room for Zenbo's assessment. This room is separated from human doctors' clinic. The advantage is to keep the patient's privacy and also make sure the quality of voice recognition.
+
+![Artboard 2_1](/images/Zenbo-3.png)
+
+</Tab>
+
+<Tab name="Phase 3">
+
+### Phase 3: Dialogue Flow Design
+
+Based on the current assessment questionnarie, I interviewed the eight anesthesiologists how they ask patients their medical history, and finally summarized the questions into a flow.
+
+![Artboard 2_2](/images/Zenbo-4.png)
+
+### Dialogue fluency test
+
+To verify the user experience of the dialogue design at a low cost, a designer and I randomly selected 4 colleagues who aged 20~30 to join the Wizard of OZ test.
+
+- Method: Online meeting
+- Tool: Azure TTS (Text to Speech)
+- Post-test: Patient emotion test (reference)
+
+![Artboard 11](/images/Zenbo-9.png)
+
+From the pilot study, participants indicated that the robot didn’t have follow-up questions, which seemed purposeful. According to the feedback, I added the ‘Skip Logic Design’. Under this structure, when a patient said he/she has diabetes, the robot can jump to related follow-up questions.
+
+The wizard of OZ test also helps strengthn the error handling mechanism - if the robot cannot understand the patient's answer, it will ask again in another way, but if the robot still cannot get the answer after three times, the robot will leave the answer blank with a mark, and this question will be asked by the human doctor.
+
+</Tab>
+
+</Tabs>
+
+---
+
+### Evaluation
+
+The main purpose of the field study is to investigate whether the robot-assisted assessment can improve patients' satisfaction. I cooperated with a hospital research assistant and two anesthesiologists to do the field experiment.
+
+We recruited 27 patients from the waiting room with their consent. The age ranged from 35 to 60 and they can speak and understand Chinese. 16 participants were interviewed by Zenbo and a real doctor, and 11 participants were control group who were interviewed by the doctor. After the experiment, we interviewed the robot-assisted group about their interaction with the robot.
+
+![Artboard 11_1](/images/Zenbo-10.png)
+
+---
+
+### Results
+
+#### Quantitative analysis
+
+The robot-assited group spent 2'56 minutes for assessment on average, which is more than the control group by almost 1 minute. This was caused by longer medical history interview by Zenbo, which took almost two minutes. Though the robot-assisted group got a bit lower average satisfaction than the control group, the score is still high with 4.56 out of 5.
+
+The result indicates a positive sign of using robot in the clinic. Patients were served for longer time on personal medical history interview with the robot, and still remained highly satisfied.
+
+![Artboard 11_2](/images/Zenbo-11.png)
+
+#### Qualitative analysis
+
+From the user interview, I summarized the following insights:
+
+1. **Patients are more willing to speak more with the robot.**
+
+   > I think I talked more to Zenbo. <ins> Because it is a robot, I felt relaxed to share </ins> (my medical history).(Female, aged 42, patient type 2).
+
+2. **Doctors can ask more detailed based on Zenbo's assessment.**
+
+   > One patient has hyperthyroidism, and <ins>because Zenbo's assessment record mentioned it, so I can directly ask more detailed about the patient's current situation.</ins> (Dr. Ke)
+
+3. **Patients were concerned whether Zenbo understood their answer.**
+
+   > In the question about smoking habit, I answered "No" for three times, but <ins>the robot kept asking again. I was confused until it moved on to the next question.</ins> I wonder whether he could understand or not.(Male, Aged 57, patient type 1)
+
+---
+
+### Reflections and Next step
+
+When starting the field study, I found that the clinic was crowded and noisy, which made it harder for clear audio reception. This arouse my reflection- is the robot assistant the best practice? Perhaps the APP can be installed in mobile phones. The patients can talk with a chatbot at home before visiting the hospital. Thus, their voice can be clear. Otherwise, the hospital should set up an individual room, for the better audio quality as well as patients’ privacy.

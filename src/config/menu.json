@@ -1,14 +1,9 @@
 {
   "main": [
     {
-      "name": "Home",
-      "url": "/"
-    },
-    {
       "name": "About",
       "url": "/about"
     },
-   
     {
       "name": "Project",
       "url": "/project"
@@ -19,13 +14,6 @@
     }
   ],
   "footer": [
-    {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "Privacy Policy",
-      "url": "/privacy-policy"
-    }
+    
   ]
 }

@@ -3,26 +3,29 @@ import config from "@/config/config.json";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
+import { FaTags } from "react-icons/fa";
 
 const {
   summary_length,
   project_folder,
 }: { summary_length: number; project_folder: string } = config.settings;
 const { data } = Astro.props;
-const { title, image, date, author, categories } = data.data;
+const { title, image, date, author, categories, tags } = data.data;
 ---
 
 <div class="bg-body dark:bg-darkmode-body">
   {
     image && (
+      <a href={`/${project_folder}/${data.slug}`}>
       <Image
         class="mb-6 w-full rounded"
         src={image}
         alt={title}
-        width={445}
+        width={400}
         height={230}
         format="webp"
       />
+      </a>
     )
   }
   <h4 class="mb-3">
@@ -38,22 +41,22 @@ const { title, image, date, author, categories } = data.data;
       </a>
     </li> -->
     <li class="mr-4 inline-block">
-      <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
+      <FaTags className={"mr-2 -mt-1 inline-block"} />
       {
-        categories.map((category: string, index: number) => (
-          <a href={`/categories/${slugify(category)}`}>
-            {humanize(category)}
-            {index !== categories.length - 1 && ","}
-          </a>
+        tags.map((tag: string, index: number) => (
+          <span key={index}>
+            {humanize(tag)}
+            {index !== tags.length - 1 && ","}
+          </span>
         ))
       }
     </li>
   </ul>
-  <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p>
-  <a
+<!--   <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p> -->
+ <!--  <a
     class="btn btn-outline-primary btn-sm"
     href={`/${project_folder}/${data.slug}`}
   >
     read more
-  </a>
+  </a> -->
 </div>

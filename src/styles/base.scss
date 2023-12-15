@@ -4,6 +4,24 @@ html {
 
 body {
   @apply bg-body font-primary font-normal leading-relaxed text-text dark:bg-darkmode-body dark:text-darkmode-text;
+ 
+  .mb-4 a{
+    text-decoration: underline;
+    text-decoration-color: #66C6BA; /* Set link underline color */
+    color: #66C6BA; /* Set link text color */
+    transition: color 0.3s, text-decoration-color 0.3s; /* Add transition effects */
+}
+  a:hover{
+    text-decoration: none; /* Remove default underline on hover */
+    color: #F3D3BD; /* Change link text color on hover */
+    text-decoration-line: underline wavy; /* Add underline and wavy effect on hover */
+    text-decoration-color: #F3D3BD; /* Change link underline color on hover */
+    
+   
+  
+}
+
+
 }
 
 h1,
@@ -18,6 +36,14 @@ h6 {
 h1,
 .h1 {
   @apply text-h1-sm md:text-h1;
+  
+ins {
+ 
+  text-decoration: underline; /* Fallback for older browsers */
+  text-decoration-color: pink;
+
+  
+}
 }
 
 h2,
@@ -54,8 +80,22 @@ code {
   @apply after:border-none;
 }
 
-a:hover {
- text-decoration-line: underline;
- text-decoration-color: pink;
- text-decoration-style: wavy;
+p {
+
+    
+ins {
+  
+  text-decoration: none;
+  background: linear-gradient(180deg,rgba(255,255,255,0) 80%, #FEE866 50%);
+  
 }
+
+}
+
+
+
+
+
+
+
+

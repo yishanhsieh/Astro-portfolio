@@ -40,7 +40,7 @@ const { banner, features }: Homepage = homepage.data;
             )
           }
         </div>
-        {
+          {
           banner.image && (
             <div class="col-12">
               <Image
@@ -52,14 +52,14 @@ const { banner, features }: Homepage = homepage.data;
               />
             </div>
           )
-        }
+        }  
       </div>
     </div>
   </section>
   <!-- /Banner -->
 
   <!-- Features -->
-  {
+ {
     features.map((feature, index: number) => (
       <section class={`section-sm ${index % 2 === 0 && "bg-gradient"}`}>
         <div class="container">
@@ -96,9 +96,9 @@ const { banner, features }: Homepage = homepage.data;
         </div>
       </section>
     ))
-  }
+  } 
   <!-- /Features -->
 
-  <Testimonial testimonial={testimonial} />
-  <CallToAction call_to_action={call_to_action} />
+  <!-- <Testimonial testimonial={testimonial} /> -->
+ <CallToAction call_to_action={call_to_action} /> 
 </Base>
