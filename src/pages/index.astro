@@ -1,5 +1,6 @@
 ---
 import Base from "@/layouts/Base.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
 import Testimonial from "@/partials/Testimonial.astro";
@@ -7,6 +8,7 @@ import type { Button, Feature } from "@/types";
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 import { FaCheck } from "react-icons/fa/index.js";
+
 
 interface Homepage {
   banner: {
@@ -22,11 +24,12 @@ const homepage = await getEntry("homepage", "-index");
 const testimonial = await getEntry("sections", "testimonial");
 const call_to_action = await getEntry("sections", "call-to-action");
 const { banner, features }: Homepage = homepage.data;
+
 ---
 
 <Base>
   <!-- Banner -->
-  <section class="section pt-14">
+  <section class="section pt-14 banner-background">
     <div class="container">
       <div class="row justify-center">
         <div class="mb-16 text-center lg:col-7">
@@ -40,7 +43,7 @@ const { banner, features }: Homepage = homepage.data;
             )
           }
         </div>
-          {
+          <!--  {
           banner.image && (
             <div class="col-12">
               <Image
@@ -52,14 +55,15 @@ const { banner, features }: Homepage = homepage.data;
               />
             </div>
           )
-        }  
+        }  --> 
       </div>
     </div>
   </section>
   <!-- /Banner -->
 
+
   <!-- Features -->
- {
+  {
     features.map((feature, index: number) => (
       <section class={`section-sm ${index % 2 === 0 && "bg-gradient"}`}>
         <div class="container">
@@ -99,6 +103,11 @@ const { banner, features }: Homepage = homepage.data;
   } 
   <!-- /Features -->
 
-  <!-- <Testimonial testimonial={testimonial} /> -->
- <CallToAction call_to_action={call_to_action} /> 
+
 </Base>
+
+
+ 
+
+  <!-- <Testimonial testimonial={testimonial} /> -->
+<!--  <CallToAction call_to_action={call_to_action} />  -->

@@ -17,9 +17,8 @@ body {
     text-decoration-line: underline wavy; /* Add underline and wavy effect on hover */
     text-decoration-color: #F3D3BD; /* Change link underline color on hover */
     
-   
-  
 }
+
 
 
 }
@@ -37,13 +36,27 @@ h1,
 .h1 {
   @apply text-h1-sm md:text-h1;
   
-ins {
- 
-  text-decoration: underline; /* Fallback for older browsers */
-  text-decoration-color: pink;
-
   
+ins {
+
+color: #41337A;
+text-decoration-color: #48E5C2;
+text-decoration:underline dashed ;
+  text-decoration-color: #48E5C2;
+
+ /*  text-decoration-color:#F3D3BD;  */
+ 
 }
+
+ins:hover{
+  font-size: 1.07em; /* Increase font size on hover */
+  transform: translateY(-2px); /* Move text up by 2 pixels on the y-axis */
+  transition: font-size 0.5s, transform 0.5s; /* Add transition effects */
+  text-decoration:underline dashed ;
+  text-decoration-color: #48E5C2;
+}
+
+
 }
 
 h2,
@@ -95,7 +108,12 @@ ins {
 
 
 
+.banner-background {
+  background-image: url('../../public/images/data-dot-background-3.png') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
 
 
-
-
+}

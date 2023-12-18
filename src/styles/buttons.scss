@@ -1,8 +1,8 @@
 .btn {
   @apply inline-block rounded border border-transparent px-5 py-2 font-semibold capitalize transition;
   &:hover {
-    background-color: #2980b9;
-    border-color: #2980b9;
+    background-color: #66C6BA;
+    border-color: #66C6BA;
     color: #fff;
     transform: translateY(-3px); /* Move the button slightly up on hover */
   }
