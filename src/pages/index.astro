@@ -21,9 +21,8 @@ interface Homepage {
 }
 
 const homepage = await getEntry("homepage", "-index");
-const testimonial = await getEntry("sections", "testimonial");
-const call_to_action = await getEntry("sections", "call-to-action");
 const { banner, features }: Homepage = homepage.data;
+const call_to_action = await getEntry("sections", "call-to-action");
 
 ---
 
@@ -32,7 +31,7 @@ const { banner, features }: Homepage = homepage.data;
   <section class="section pt-14 banner-background">
     <div class="container">
       <div class="row justify-center">
-        <div class="mb-16 text-center lg:col-7">
+        <div class="mb-24 text-center lg:col-7">
           <h1 set:html={markdownify(banner.title)} class="mb-4" />
           <p set:html={markdownify(banner.content)} class="mb-8" />
           {
@@ -43,19 +42,7 @@ const { banner, features }: Homepage = homepage.data;
             )
           }
         </div>
-          <!--  {
-          banner.image && (
-            <div class="col-12">
-              <Image
-                src={banner.image}
-                height={380}
-                width={1200}
-                alt="banner image"
-                format="webp"
-              />
-            </div>
-          )
-        }  --> 
+         
       </div>
     </div>
   </section>
@@ -107,7 +94,3 @@ const { banner, features }: Homepage = homepage.data;
 </Base>
 
 
- 
-
-  <!-- <Testimonial testimonial={testimonial} /> -->
-<!--  <CallToAction call_to_action={call_to_action} />  -->

@@ -1,0 +1,103 @@
+---
+title: "AI Medical Transcription- A Product Optimization Case"
+meta_title: ""
+description: "Improving the UX of speech recognition software for medical transcription."
+date: 2021-12-01T05:00:00Z
+image: "/images/medical_transcription_cover.png"
+categories: ["project"]
+author: ""
+tags: ["Smart hospital", "UX research", "Product management"]
+draft: false
+---
+
+<br />
+<br />
+
+### Project Overview
+
+- **My role**: Product manager
+- **Highlights**:
+  - The ASUS AI medical transcription aims to improve medical documentation efficiency by voice recognition. However, the product received complaints from hospital users. As the PM, I analyzed user behaviors to locate problems, collaborating with a team of over 15 designers and engineers to propose solutions.
+- **Project time**: 2021 July ~ 2021 Nov, 5 months in total.<br/>
+
+---
+
+### Customer Complaints
+
+A Taiwanese hospital used our medical AI transcription software embedded in their HIS (Hospital Information System) to improve nursing documentation efficiency. After a one-month trial, the usage showed a significant decrease. <ins>The nurses conveyed that speech recognition did not prove to be faster than traditional typing. However, the recognition rate reached 90%, so we suspected there were other underlying factors causing the decline.</ins>
+
+![medical_transcription_challenge](/images/medical_transcription_challenge.png)
+
+---
+
+### Problem Solving
+
+Though our clients (aka. the nurses) complainted that the new system didn't improve their work efficiency, it was still too ambiguous to detect what the problem is. Thus, I adopted three steps to specify the problem and further thought about the solution. Click the tab to see each problem solving process.
+
+<Tabs client:load>
+
+<Tab name="1. Clarify scenarios">
+
+#### Clarify scenarios
+
+First of all, I used phone call and online meeting to interview three nurses who were responsible for different wards, trying to understand how the nurses used our AI transcription system and detecting the potential problems. According to the interview, I summarized documentation scenarios into two:
+![medical_transcription_tab1](/images/medical_transcription_tab1.webp)
+
+Compared to situation 2, the long-term hospitalization, situation 1 where <ins>patients were hospitalized for the first time requires the nurses three times of time to finish the medical documentation.</ins> Therefore, the nursing director and I agreed on <ins>setting situation 1 as the top priority problem to solve with.</ins>
+
+</Tab>
+
+<Tab name="2. Behavior analysis">
+
+#### Behavior analysis
+
+After understanding the use scenarios, I needed to investigate how the nurses interact with the software, what actions they did, and what took them the most time. Thus, I requested the screen recording of them using the system, breaking down their actions step by step and created flow charts (as the picture below) to examine the potential redundant behaviors.
+
+![medical_transcription_tab2-1](/images/medical_transcription_tab2-1.webp)
+
+I compared the workflow before and after using the AI transcription software, as shown in the picture below. It's clear to see that <ins>the number of mouse clicking when using AI transcription was fewer than typing; however, the time spent on speaking and recording was more than typing, which made almost no before-after difference.</ins>
+![medical_transcription_tab2-2](/images/medical_transcription_tab2-2.webp)
+
+After furthur investigating their voice recording, I found the nurses read aloud the whole sentence such as 'the patient had a diarrhea twice yesterday' for AI to identify and fill into the corresponding checkbox. <ins>Compared to clicking and typing directly on HIS system, voice recognition took them more time and energy to finish one record if they had to record every question with a whole sentence.</ins>
+
+</Tab>
+
+<Tab name="3. Redefine problems">
+
+#### Redefine problems
+
+Through user interview and behavior analysis, I made the ambiguous customer complaints more concrete. I knew the main problem was that nurses had to read plenty of sentences on the AI voice recognition software for a first-time patient's record that consisted of sixty to eighty quesitons. Thus, <ins>I concluded that our team should take efforts to reduce the amount of sentences the nurses had to read.</ins>
+
+![medical_transcription_tab3](/images/medical_transcription_tab3.webp)
+
+</Tab>
+
+</Tabs>
+
+---
+
+### Solution Brainstorming
+
+To make sure <ins>all the stakeholders</ins>, including the nurses, the nurse director, the HIS specialists, and engineers in our team, <ins>were on the same page, I arranged two online meetings to brainstorm solutions.</ins> <ins>Combined with clinical experiences and development feasibility, we designed a shorten key sentences</ins>, such as _‘musle power normal’_, to represent the muscle power of the four limbs are all five points. Thus, nurses could avoid reading the muscle power score of each limb, which was more natural and efficiency for voice recording.
+
+![medical_transcription_system](/images/medical_transcription_system.png)
+
+---
+
+### Customer Feedback
+
+After one-month of redesign and development, we released the new version. <ins>The nurses indicated that it was easier to use and matched their clinical work habits. The design of shorten key sentences doubled the efficiency of medical transcription.</ins> Some nurses reflected that they started to experience the benefits of voice recognition and looked forward to more applicaiton in other nursing documentation.
+
+- Related news:[ASUS and Xiuchuan release speech recognition system for nursing forms(Chinese)](https://www.asus.com/tw/news/e9teshdwlftk3uul/)
+
+---
+
+### Reflections
+
+From this project, I know more about the workflow of nurse documentation. Nurses care about efficiency. As a result, when designing the AI medical transcription, I realized it is essential to be simple. <ins>The AI tool should be well-integrated with their existing HIS, and the number of voice-recognition commands should be less than three types. Otherwise, the overall documentation efficiency will not surpass the typing.</ins>
+
+Since the product is still in the trial period, rapid testing and feedback are crucial. This time, video recording analysis helped me discover the underlying problem efficiently. However,<ins> though screen recording is a time-saving alternative for behavior analysis, I prefer visiting the hospital in-person, since it is easier to clarify problems in a more comprehensive way.</ins>
+
+---
+
+<h3>Next project:</h3> [<h5>Guess Anime Songs App- Make friends with anime</h5>](/project/guess-anime-songs)

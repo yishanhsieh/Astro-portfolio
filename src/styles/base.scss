@@ -4,23 +4,6 @@ html {
 
 body {
   @apply bg-body font-primary font-normal leading-relaxed text-text dark:bg-darkmode-body dark:text-darkmode-text;
- 
-  .mb-4 a{
-    text-decoration: underline;
-    text-decoration-color: #66C6BA; /* Set link underline color */
-    color: #66C6BA; /* Set link text color */
-    transition: color 0.3s, text-decoration-color 0.3s; /* Add transition effects */
-}
-  a:hover{
-    text-decoration: none; /* Remove default underline on hover */
-    color: #F3D3BD; /* Change link text color on hover */
-    text-decoration-line: underline wavy; /* Add underline and wavy effect on hover */
-    text-decoration-color: #F3D3BD; /* Change link underline color on hover */
-    
-}
-
-
-
 }
 
 h1,
@@ -43,19 +26,16 @@ color: #41337A;
 text-decoration-color: #48E5C2;
 text-decoration:underline dashed ;
   text-decoration-color: #48E5C2;
-
- /*  text-decoration-color:#F3D3BD;  */
  
 }
 
 ins:hover{
-  font-size: 1.07em; /* Increase font size on hover */
+  font-size: 1.1em; /* Increase font size on hover */
   transform: translateY(-2px); /* Move text up by 2 pixels on the y-axis */
   transition: font-size 0.5s, transform 0.5s; /* Add transition effects */
   text-decoration:underline dashed ;
   text-decoration-color: #48E5C2;
 }
-
 
 }
 
@@ -114,6 +94,61 @@ ins {
   background-repeat: no-repeat;
   background-position: center;
  
+}
+
+.project-card {
+
+  img {
+    transition: transform 0.5s, filter 0.5s; /* Transition effects */
+  }
+
+  img:hover {
+    transform: scale(1.04) translateY(-3px); /* Enlarge by 10% and move up by 5 pixels */
+    
+  }
+
+}
 
 
+
+.footer {
+  a{
+    text-decoration: underline;
+    text-decoration-color: #66C6BA; /* Set link underline color */
+    color: #66C6BA; /* Set link text color */
+    transition: color 0.3s, text-decoration-color 0.3s; /* Add transition effects */
+}
+  a:hover{
+    text-decoration: none; /* Remove default underline on hover */
+    color: #F3D3BD; /* Change link text color on hover */
+    text-decoration-color: #F3D3BD; /* Change link underline color on hover */
+    
+}
+
+}
+
+li a{
+  font-size:large;
+  font-weight: 600;
+  color: #41337A;
+ 
+
+}
+
+
+li a:hover{
+  
+  text-decoration:underline solid 4px  ;
+  text-decoration-color: #48E5C2;
+  
+  }
+
+li {
+
+  ins {
+  
+    text-decoration: none;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 80%, #FEE866 50%);
+    
+  }
 }

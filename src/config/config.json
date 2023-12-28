@@ -5,10 +5,10 @@
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.webp",
-    "logo_darkmode": "/images/logo.webp",
-    "logo_width": "130",
-    "logo_height": "30",
+    "logo": "/images/logo.png",
+    "logo_darkmode": "/images/logo.png",
+    "logo_width": "200",
+    "logo_height": "42",
     "logo_text": "Yishan Hsieh"
   },
 
@@ -25,7 +25,7 @@
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "© 2023 Yishan's Website<br> Template by _[Zeon Studio](https://github.com/zeon-studio/astroplate)_. Adjusted by Yishan at _[this repo](https://github.com/yishanhsieh/astro-portfolio)_"
+    "copyright": "© 2023 Yishan's Website<br> Template by _[Zeon Studio](https://github.com/zeon-studio/astroplate)_. Modified by Yishan at _[this repo](https://github.com/yishanhsieh/astro-portfolio)_"
   },
 
   "navigation_button": {

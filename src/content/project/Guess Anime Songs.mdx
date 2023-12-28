@@ -1,0 +1,120 @@
+---
+title: "Guess Anime Songs App- Make Friends with Anime"
+meta_title: ""
+description: "Help people know more about Japanese/Worldwide Manga culture by guessing anime songs"
+date: 2023-12-19T05:00:00Z
+image: "/images/guess_song_cover.png"
+categories: ["project"]
+author: ""
+tags: ["Mobile app design", "Product development"]
+draft: false
+---
+
+<br />
+<br />
+
+### Project Overview
+
+- **My role**: Designer & Developer
+- **Highlights**:
+  - This is the final project of the course _Cross-platform programming_ at IUB in 2023 fall semester. I learned React Native from zero experience, and built up the interactive song guessing game in one month.
+- **Project time**: 2023 Oct 17 ~ 2023 Nov 14, 1 month.
+
+---
+
+### Motivation
+
+As an international student, I often initiate small talk with other students about popular animes like One Piece and Naruto. <ins>This song-guessing game is designed to generate conversation topics in a group. Additionally, it helps promote animes to those who haven't heard about them.</ins> Sometimes, people start following an anime because of its catchy theme songs. By playing the game together, international students can get involved in the new environment and people.
+
+---
+
+### Design Inspiration
+
+To understand how to design a song guessing game, I searched the existing song guessing games, whihc are [SongPop Classic](https://play.google.com/store/apps/details?id=air.com.freshplanet.games.SongPop2&hl=en&gl=US&pli=1) and [SongTrivia](https://songtrivia2.io/). Finally, I summarized the shared flow into the chart below.
+
+![guess_song_flow](/images/guess_song_inspiration.png)
+
+### Design trade-off
+
+- **Competition-oriented or Learning-oriented?** <br/>
+  Most of guess song games positions themselves as a competitive game. However, competitive play often leads players to guess impulsively, skipping correct answers to rush through questions. <ins>I believe multiplayer competition might hinder the enjoyment of anime songs in the game. That's why I've designed it for individual play, allowing each player to compete against themselves.</ins>
+
+- **Error then Fail or Trial and Error?**<br/>
+  In the existing games, players have only one chance to guess the song in every question. Whatever they pass or not, the game automatically moves on to the next question, which I called as 'Erorr then Fail'. However, <ins>to intrigue students to think and discuss, I regard the game design that encourages Trial and Error can achieve the goal.</ins>
+
+---
+
+### Wireframe
+
+- Low-fidelity wireframe <br/>
+  Based on the design research, I listed the necessary function lists and drew them into wireframes.
+
+  - **Landing page**
+  - **Get random questions** : perform the anime song's main chorus
+  - **Get random options** : show four unrepeatitive album titles
+  - **Answer logics** : show correct/incorrect status
+  - **Result page** : show individual performance and anime information
+
+  ![guess_song_wireframe](/images/guess_song_wireframe.png)
+
+- High-fidelity wireframe
+
+  ![guess_song_guideline](/images/guess_song_Guidline.png)
+
+  ## <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FdyC9XOgHfOpaTIulB6qu8l%2FUntitled%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3DGl3CiNflBa20Xn8o-1" allowfullscreen></iframe>
+
+  ![guess_song_frame1](/images/guess_song_frame1.png)
+
+---
+
+### Prototyping
+
+I spent one month to develope the app by React Native, NodeJS, and Expo. The database is on Firebase. The music api used is the spotify API from RapidAPI. To know more about my coding process, welcome to visit [this repo](https://github.com/yishanhsieh/info590-fa2023-final-project) on github.
+
+You're also welcome to play with my [demo site](https://guesssong-2fd90.web.app/) or watch the demo video below. (Notice: The video has music.)
+
+<Youtube client:load id="CrudeDNN7uY" title="Guess Anime Song" />
+
+<br />
+<br />
+
+---
+
+### User testing
+
+At the semester's end, <ins>I presented a demo of my work in our department, inviting fellow students to play the game. This user demo provided an opportunity to observe and interview participants</ins> about their experiences with the game.
+
+Six individuals participated in the demo: one was an Indian undergraduate, and the remaining five were American undergraduates. Two played individually, while the other four played with their friends watching.
+![guess_song_evaluation](/images/guess_song_evaluation.png)
+\(\*The three men on the left hand side disucssed frequently about the game as they played together. The right hand side depicts an American girl came alone to play the game, and we discussed about anime during the game. Illustration by Yishan)
+
+<br />
+Throughout the session, I noticed some interesting points:
+
+1. **The game triggered group discussion**: Among <ins>those playing with friends observing, discussions were frequent.</ins> Despite limited knowledge of anime, they listened attentively, actively trying to contribute to finding the answers.
+
+2. **Background matters**: There was a student who knew Japanese but had limited anime knowledge. Despite this, she eagerly requested to play another round, displaying <ins>a keen interest in cracking the quiz</ins>.
+
+3. **Appropriate number of questions**: The initial prototype lacked a limit on the number of questions. However, <ins>participants with limited anime knowledge felt fatigued after guessing five songs</ins>.
+
+---
+
+### Adjustment of the design
+
+From users' feedback, I made two UI adjustment:
+
+- **Enlarge the option panel**<br/>
+  Since the song's title is acquired from API, the maximum can be as long as 8 words, which required users to scroll down. However, <ins>most of users didn't know they should scroll by dragging the scroll bar on the option panel. As a result, I adjusted the interface by minimizing the button 'Random Song' to an icon</ins>, leaving more space for showing options.
+
+- **Showing anime information after each question**<br/>
+  The previous design provides anime introduction on the result page but I found that users discussed a lot about the anime when they were guessing the music. Thus, <ins>I made the anime introduction show up after each question to reinforce their learning and trigger interests in that anime.</ins>
+
+<Youtube client:load id="6Ty9a4ukju0" title="Guess song UI adjustment" />
+
+---
+
+### Reflection & Next step
+
+The app aims to engage international students in groups and promote anime culture. During the demo session, I was delighted to see many students enjoy guessing the songs. <ins>I am also glad to see introverted American students comfortably interacting with Asian students, bonding over anime culture.</ins>
+
+I received feedback suggesting multiplayer or time restrictions to enhance competitiveness, though it contradicts my aim to eliminate competition, but <ins>I will reconsider making use of competitiveness to encourge continuous engagement.</ins> This will be my next focus to improve the game.

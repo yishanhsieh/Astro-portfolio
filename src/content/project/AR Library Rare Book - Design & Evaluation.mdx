@@ -1,0 +1,145 @@
+---
+title: "AR Library Rare Book - Design & Evaluation"
+meta_title: ""
+description: "A study of Reading Library Rare Books with AR"
+date: 2019-6-30T05:00:00Z
+image: "/images/ar_cover.png"
+categories: ["project"]
+author: ""
+tags: ["Virtual heritage", "AR", "UX research"]
+draft: false
+---
+
+<br />
+<br />
+
+### Project Overview
+
+- **My role**: UX researcher & Developer
+- **Highlights**:
+  This project is partially extracted from my master degree thesis topic in Library and Information Science at National Taiwan University. In this project, I am responsible for ideation, experiment design & implementation.
+- **Project time**: 2017 July ~ 2019 June, 2 years.<br/>
+
+---
+
+### Challenges
+
+#### Limited display of rare books
+
+Rare books such as the early-printed books in Gutenberg's time, are typically displayed in a locked glass case with a fixed page with illustration open on a book support. However, <ins>visitors can only see the tiny fraction of the book without understanding the valuable content.</ins>
+
+Some libraries have applied Augmented Reality(AR) in rare book displays to make the exhibition more interactive, but lack of them have evaluated the effectiveness. Thus, in the project, <ins>I curated a mini rare book exhibition with AR and evaluted the result, hoping to provide suggestions for library exhibitions.</ins>
+
+![ar_challenge](/images/ar_challenge.png)
+(Photo by Yishan at National Taiwan University Library 5F)
+
+---
+
+### Target Audience
+
+Through literature review and observation in libraries, <ins>I summarized two types of students who were interested in library rare books - the expert students and the non-expert students</ins>. These two types of students shared the same curiosity toward rare books, regardless of their major backgroud. Click the tabs to see more.
+
+<Tabs client:load>
+<Tab name="Persona 1">
+#### Persona 1: Non-expert student
+
+![ar_user1](/images/ar_user1.png)
+
+</Tab>
+
+<Tab name="Persona 2">
+  #### Persona 2: Expert student ![ar_user2](/images/ar_user2.png)
+</Tab>
+
+<Tab name="Storyboard">
+  #### Storyboard ![ar_storyboard](/images/ar_storyboard.png)
+</Tab>
+
+</Tabs>
+
+---
+
+### Design Research
+
+#### AR layout design: Side-by-side vs. Integrated
+
+To decide how to display the AR information on the rare book, I learned from literature review. According to [Grasset et al.(2008)](Reality_Book_Is_It_Still_a_Real_Book), <ins>AR book design includes (1) media-integrated and (2) side-by-side.</ins> The integrated design is more like a mixed-reality(MR) design where users felt the real objects connected to the virtual objects seamlessly.
+
+![ar_book](/images/ar_book.png)
+
+Compared to the side-by-side layout that required more cross-referencing reading, <ins>integrated AR design has the advantage of information proximity, which is supposed to cause fewer cognitive load. Thus, I designed the AR rare book based on the integrated information design</ins>.
+
+---
+
+### Design & Prototyping
+
+Based on the design research, I chose a famous rare book, _the Nature of Herb_, as the exhibited book. The copied pages were collected from National Taiwan University special collection database.
+
+<ins>I used Adobe XD to visualize user interaction with AR rare book</ins>, as
+shown in the flow below. <ins>This UI flow also provided as a guidance while I was developing the AR app.</ins>
+
+![ar_flow](/images/ar_flow.png)
+
+After designing the flow, I spent 2 weeks developing the Android AR app and the AR objects by Unity and 3D Max. Users can read the colorful herb pictures and Chinese translation augmented on the original illustration and Latin, helping users understand the story in the rare book and compare the ancient herbs with the modern ones. The prototype is shown as below.
+
+![ar_prototype](/images/ar_hifi.gif)
+
+---
+
+### User Test
+
+To evaluate the effects of AR rare book on students' learning performance, <ins>I designed a between-subjects experiment and arranged four lab members to assist my experiments.</ins> I spent three weeks to finish all the experiments, and two weeks to analyze
+the data.
+
+- **Participants**: 64 university students recruited through social media and campus email
+- **Methods**: between-subjects experiment (AR vs. Non-AR) + Questionnaire + Interview
+- **Experiment procedure**:
+  ![ar_experiment_flow](/images/ar_experiment_flow.png)
+  (\*I chose the short version of flow state questionnaire (9 questions) because it's quicker for students to self report their feelings after the short experiment)
+- **Materials**: Both groups were provided with a mini rare book exhibition which introduced 15th century manuscripts and printed books.<ins>The AR group were given a tablet to see pictures and taglines by AR app. The non-AR group was given paper cards with the same introductory information printed on it.</ins> The two groups had the same amount of supplimental information.
+
+![ar_experiment](/images/ar_experiment.png)
+
+---
+
+### Findings & Feedback
+
+- **Quantitive analysis**:
+  I used SPSS to get the descriptive data and ANOVA correlation. Though there was no significant correlation between the average time spent of the two groups, <ins>it's interesting to find that non-AR group students spent more time than the AR group, which contradicted my expectation. But why? I further analyzed user interview to find the reasons.</ins>
+  | Group | Avg Time Spent(sec.) | Avg. Flow score |
+  | :----- | :------------------: | :-------------: |
+  | AR (n=32) | 484.8s(8 mins) | 45.75 (/54) |
+  | Non-AR (n=32) | 566.4s(9.4 mins) | 45.34 (/54) |
+
+- **Qualitative analysis**:
+  I coded user interview transcripts to unveil their the parts they liked and disliked during the exhibit, and I found both groups mentioned about '_cross-referencing_ ', or '_comparing between A and B_ '.
+
+  - It took time and energy to <ins>compare the features</ins> on the rare book replica <ins>with the taglines on the paper card</ins>.(Non-AR group)
+  - AR virtual information <ins>covered on the original content, making it hard to compare the difference</ins>.(AR group)
+
+---
+
+### Design Adjustment
+
+From the results, cross referencing is an important learning action that faciliates students to memorize the key takeaways of the exhibit. <ins>The current AR design reduced the efforts to look for related information, but the integrated design can hinder the original content. Thus, I would like to adjuste the AR objects to be movable. Users can move the AR information to where they felt confortable with reading</ins>.
+
+![ar_adjustment](/images/ar_adjustment.png)
+
+---
+
+### Reflections & Suggestions
+
+AR pictures and translation impressed the visitors
+Generally in museum or library exhibition experience measurement, if users spent more time on the exhibition, it's an representation of deeper engagement. In our experiment, it seems <ins>AR doesn't lengthen students' visit time longer than the control group, but from the user interview, the multimedia (aka. the colorful herb pictures and translation) impressed them and made them stay focused on the exhibit.</ins>
+
+For library holding rare book exhibition, I will suggest:
+
+1. Using AR to show differences between ancient and modern content can engage visitors in the exhibit.
+2. Leave the control of AR objects to users - users can move or scale the AR objects on their own.
+3. Using AR to spotlight the key features of the rare book; otherwise, visitors may ignore appreciating the traditional book appearance but only read the AR information.
+
+---
+
+<h3>Next project:</h3> [<h5>
+  Reduce Patients' Waiting Unsatisfaction by Robot
+</h5>](/project/use-drrobot-reduces-assessment-waiting-time)

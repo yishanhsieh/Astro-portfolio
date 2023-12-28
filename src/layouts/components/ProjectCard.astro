@@ -10,19 +10,19 @@ const {
   project_folder,
 }: { summary_length: number; project_folder: string } = config.settings;
 const { data } = Astro.props;
-const { title, image, date, author, categories, tags } = data.data;
+const { title, image, tags } = data.data;
 ---
 
-<div class="bg-body dark:bg-darkmode-body">
+<div class="bg-body dark:bg-darkmode-body project-card ">
   {
     image && (
       <a href={`/${project_folder}/${data.slug}`}>
       <Image
-        class="mb-6 w-full rounded"
+        class="mb-8 w-full rounded "
         src={image}
         alt={title}
-        width={400}
-        height={230}
+        width={300}
+        height={130}
         format="webp"
       />
       </a>
@@ -33,13 +33,8 @@ const { title, image, date, author, categories, tags } = data.data;
       {title}
     </a>
   </h4>
-  <ul class="mb-4">
-   <!--  <li class="mr-4 inline-block">
-      <a href={`/authors/${slugify(author)}`}>
-        <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-        {humanize(author)}
-      </a>
-    </li> -->
+  <ul class="mb-24">
+  
     <li class="mr-4 inline-block">
       <FaTags className={"mr-2 -mt-1 inline-block"} />
       {
@@ -52,11 +47,5 @@ const { title, image, date, author, categories, tags } = data.data;
       }
     </li>
   </ul>
-<!--   <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p> -->
- <!--  <a
-    class="btn btn-outline-primary btn-sm"
-    href={`/${project_folder}/${data.slug}`}
-  >
-    read more
-  </a> -->
+
 </div>
