@@ -212,6 +212,39 @@
     
 }
 
+
+}
+
+@media screen and (max-width: 767px) {
+  .content p {
+    text-align: left;
+  }
+}
+
+
+.custom-display-block{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  grid-gap: 50px;
+
+}
+
+@media screen and (max-width: 1023px) {
+  .custom-display-block {
+    display: block;
+  }
+  
+}
+
+.custom-banner-margin {
+  margin-bottom: 8rem; /* Default margin bottom */
+}
+
+@media screen and (max-width: 767px) {
+  .custom-banner-margin {
+    margin-bottom: 12px; /* Adjusted margin bottom for smaller screens */
+  }
 }
 
 

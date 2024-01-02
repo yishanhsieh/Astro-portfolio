@@ -96,6 +96,17 @@ ins {
  
 }
 
+@media screen and (max-width: 512px) {
+  .banner-background {
+    background-image: url('/images/data-dot-background-4.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+  }
+
+}
+
 .project-card {
 
   img {
@@ -152,3 +163,4 @@ li {
     
   }
 }
+

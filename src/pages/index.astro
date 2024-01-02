@@ -31,7 +31,7 @@ const call_to_action = await getEntry("sections", "call-to-action");
   <section class="section pt-14 banner-background">
     <div class="container">
       <div class="row justify-center">
-        <div class="mb-24 text-center lg:col-7">
+        <div class="text-center lg:col-7 custom-banner-margin">
           <h1 set:html={markdownify(banner.title)} class="mb-4" />
           <p set:html={markdownify(banner.content)} class="mb-8" />
           {
