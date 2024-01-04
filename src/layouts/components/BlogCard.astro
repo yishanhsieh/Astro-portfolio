@@ -16,6 +16,7 @@ const { title, image, date, author, categories } = data.data;
 <div class="bg-body dark:bg-darkmode-body">
   {
     image && (
+    <a href={`/${blog_folder}/${data.slug}`}>
       <Image
         class="mb-6 w-full rounded"
         src={image}
@@ -24,6 +25,7 @@ const { title, image, date, author, categories } = data.data;
         height={230}
         format="webp"
       />
+    </a>
     )
   }
   <h4 class="mb-3">
@@ -50,7 +52,7 @@ const { title, image, date, author, categories } = data.data;
       }
     </li>
   </ul>
-  <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p>
+  <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}...</p>
   <a
     class="btn btn-outline-primary btn-sm"
     href={`/${blog_folder}/${data.slug}`}
