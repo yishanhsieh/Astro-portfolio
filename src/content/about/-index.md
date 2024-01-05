@@ -14,4 +14,4 @@ I earned my bachelor and master degree in Library and information science at [Na
 
 Nice to meet you😊.
 
-👉Resume: [download](https://drive.google.com/file/d/1Ccp2MJrlq0066yRzXL152gValjA0e-NQ/view?usp=sharing)
+👉Resume: [download](https://drive.google.com/file/d/1GTuUiKH5SHMGFyD4EwwJzJHw4bVZciVj/view?usp=sharing)
