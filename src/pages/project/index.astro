@@ -7,8 +7,9 @@ import { getSinglePage } from "@/lib/contentParser.astro";
 import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader.astro";
-import PostSidebar from "@/partials/PostSidebar.astro";
+import Projectfilter from "@/partials/Projectfilter.astro";
 import { getEntry } from "astro:content";
+
 
 const { project_folder } = config.settings;
 const postIndex = await getEntry<any, string>(project_folder, "-index");
@@ -30,7 +31,15 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
   <PageHeader title={postIndex.data.title} />
   <section class="section">
     <div class="container">
+
       <div class=" justify-center ">
+        <Projectfilter
+          categories={categories}
+          
+          allCategories={allCategories}
+        />
+
+
         {/* project posts */}
         <div class=" lg:p-8 custom-display-block">
           {currentPosts
@@ -43,8 +52,3 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
     </div>
   </section>
 </Base>
-
-
-
-
-

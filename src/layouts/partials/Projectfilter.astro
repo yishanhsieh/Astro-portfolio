@@ -1,0 +1,34 @@
+---
+import { humanize } from "@/lib/utils/textConverter";
+
+const { categories, allCategories } = Astro.props;
+---
+
+<div class="flex justify-center">
+  <!-- categories -->
+  <div class="mb-8">
+    
+    <div  class="dark:bg-darkmode-theme-light">
+      <ul class="space-y-4 mb-10 ">
+        {
+          categories.map((category: any) => {
+            const count = allCategories.filter(
+              (c: any) => c === category
+            ).length;
+            return (
+             
+                <a
+                  class="rounded p-4 mr-4 bg-theme-light hover:bg-slate-700 hover:text-slate-100 focus:outline-none focus:ring focus:ring-slate-200 dark:hover:text-darkmode-primary"
+                  href={`/projectCategories/${category}`}
+                >
+                  {humanize(category)}({count})
+                </a>
+              
+            );
+          })
+        }
+      </ul>
+    </div>
+  </div>
+  
+</div>

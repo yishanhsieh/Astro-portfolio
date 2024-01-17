@@ -1,5 +1,5 @@
 ---
-import BlogCard from "@/components/BlogCard.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
@@ -9,7 +9,7 @@ import PageHeader from "@/partials/PageHeader.astro";
 
 export async function getStaticPaths() {
   const categories = await getTaxonomy(
-    config.settings.blog_folder,
+    config.settings.project_folder,
     "categories"
   );
 
@@ -21,27 +21,36 @@ export async function getStaticPaths() {
 }
 
 const { category } = Astro.params;
-const posts = await getSinglePage(config.settings.blog_folder);
+const posts = await getSinglePage(config.settings.project_folder);
 const filterByCategories = taxonomyFilter(posts, "categories", category!);
 ---
 
 <Base title={category}>
-  <PageHeader title={category} />
+  <PageHeader title={category}  />
+ 
   <li >
-    <a href="/blog" class="row justify-center">&#8592; Back to All Posts</a> 
-   
-   </li>
+   <a href="/project" class="row justify-center">&#8592; Back to All Projects</a> 
+  
+  </li>
   <div class="section-sm pb-0">
+    
     <div class="container">
-      <div class="row">
+      
+      <!-- <div class="row">
         {
           filterByCategories.map((post) => (
             <div class="mb-14 md:col-6 lg:col-4">
-              <BlogCard data={post} />
-              
+              <ProjectCard data={post} />
             </div>
           ))
         }
+      </div> -->
+
+      <div class=" lg:p-8 custom-display-block">
+        {filterByCategories
+          .map((post, index) => (
+            <ProjectCard data={post} key={index} />
+          ))}
       </div>
     </div>
   </div>

@@ -5,27 +5,27 @@ import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader.astro";
 
-const { blog_folder }: { blog_folder: string } = config.settings;
-const tags = await getTaxonomy(blog_folder, "tags");
-const allTags = await getAllTaxonomy(blog_folder, "tags");
+const { project_folder }: { project_folder: string } = config.settings;
+const categories = await getTaxonomy(project_folder, "categories");
+const allCategories = await getAllTaxonomy(project_folder, "categories");
 ---
 
-<Base title={"Tags"}>
-  <PageHeader title={"Tags"} />
-  
+<Base title={"Categories"}>
+  <PageHeader title={"Categories"} />
+ 
   <section class="section">
     <div class="container text-center">
       <ul>
         {
-          tags.map((tag: any) => {
-            const count = allTags.filter((c) => c === tag).length;
+          categories.map((category: string) => {
+            const count = allCategories.filter((c) => c === category).length;
             return (
               <li class="m-3 inline-block">
                 <a
-                  href={`/tags/${tag}`}
+                  href={`/projectCategories/${category}`}
                   class="block rounded bg-theme-light px-4 py-2 text-xl text-dark dark:bg-darkmode-theme-light dark:text-darkmode-dark"
                 >
-                  {humanize(tag)}{" "}
+                  {humanize(category)}
                   <span class="ml-2 rounded bg-body px-2 dark:bg-darkmode-body">
                     {count}
                   </span>

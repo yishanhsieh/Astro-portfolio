@@ -2,7 +2,7 @@
 import config from "@/config/config.json";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
-import { FaRegFolder, FaRegUserCircle, FaTags } from "react-icons/fa/index.js";
+import { FaTags, FaRegFolder } from "react-icons/fa/index.js";
 
 
 const {
@@ -10,7 +10,7 @@ const {
   project_folder,
 }: { summary_length: number; project_folder: string } = config.settings;
 const { data } = Astro.props;
-const { title, image, tags } = data.data;
+const { title, image, tags, categories } = data.data;
 ---
 
 <div class="bg-body dark:bg-darkmode-body project-card ">
@@ -34,7 +34,17 @@ const { title, image, tags } = data.data;
     </a>
   </h4>
   <ul class="mb-24">
-  
+    <li class="mr-4 inline-block">
+      <FaRegFolder className={"catfilter mr-2 -mt-1 inline-block"} />
+      {
+        categories.map((category: string, index: number) => (
+          <a href={`/projectCategories/${slugify(category)}`}>
+            {humanize(category)}
+            {index !== categories.length - 1 && ","}
+          </a>
+        ))
+      }
+    </li>
     <li class="inline-block">
       <FaTags className={" mr-2 -mt-1 inline-block"} />
       {
