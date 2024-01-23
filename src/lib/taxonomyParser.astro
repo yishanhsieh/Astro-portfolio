@@ -13,8 +13,11 @@ export const getTaxonomy = async (collection: string, name: string) => {
       taxonomies.push(slugify(categoryArray[j]));
     }
   }
+  
   const taxonomy = [...new Set(taxonomies)];
+  
   return taxonomy;
+ 
 };
 
 export const getAllTaxonomy = async (collection: string, name: string) => {

@@ -20,6 +20,7 @@ const tags = await getTaxonomy(project_folder, "tags");
 const sortedPosts = sortByDate(posts);
 const totalPages: number = Math.ceil(posts.length / config.settings.pagination);
 const currentPosts = sortedPosts.slice(0, config.settings.pagination);
+
 ---
 
 <Base
@@ -35,7 +36,6 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
       <div class=" justify-center ">
         <Projectfilter
           categories={categories}
-          
           allCategories={allCategories}
         />
 

@@ -23,11 +23,12 @@ export async function getStaticPaths() {
 const { category } = Astro.params;
 const posts = await getSinglePage(config.settings.project_folder);
 const filterByCategories = taxonomyFilter(posts, "categories", category!);
+
 ---
 
 <Base title={category}>
   <PageHeader title={category}  />
- 
+  
   <li >
    <a href="/project" class="row justify-center">&#8592; Back to All Projects</a> 
   
