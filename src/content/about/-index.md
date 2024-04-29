@@ -13,5 +13,3 @@ In my previous job as a sales product manager in [ASUS](https://www.asus.com/), 
 I earned my bachelor and master degree in Library and information science at [National Taiwan University](https://www.ntu.edu.tw/english/), where I picked up UX research skills and gained the opportunity to visit [San Francisco Public Library](https://sfpl.org/) as an observational student.
 
 Nice to meet you😊.
-
-👉Resume: [download](https://drive.google.com/file/d/1GTuUiKH5SHMGFyD4EwwJzJHw4bVZciVj/view?usp=sharing)
