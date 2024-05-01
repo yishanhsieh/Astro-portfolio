@@ -164,3 +164,11 @@ li {
   }
 }
 
+
+@media screen and (min-width: 1024px)  {
+  .custom-padding-laptop {
+    padding-left: 60px; /* Adjust this value to increase left margin */
+    padding-right: 60px; /* Adjust this value to increase right margin */
+  }
+}
+
